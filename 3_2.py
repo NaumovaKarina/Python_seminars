@@ -3,7 +3,9 @@
 
 def mult_lst(lst):
     l = len(lst)
-    new_lst = [lst[i]*lst[len(lst)-i-1] for i in range(l)]
+    new_lst = [lst[i]*lst[l-i-1] for i in range(l//2)]
+    if l%2==1:
+        new_lst.append(lst[l//2]*lst[l//2])
     print(new_lst)
 
 
